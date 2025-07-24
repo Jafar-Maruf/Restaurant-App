@@ -7,11 +7,11 @@ Future<void> main() async {
 
   await FirebaseInitializer.initialize();
   await initializeDependency();
-  runApp(const MyApp());
+  runApp(const RestaurantApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class RestaurantApp extends StatelessWidget {
+  const RestaurantApp({super.key});
 
   @override
   Widget build(BuildContext context) {
