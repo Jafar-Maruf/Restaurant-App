@@ -5,9 +5,9 @@ abstract class AuthFirebaseService {
 
   Future<UserEntity> signIn(LoginUserRequest userRequest);
 
-  Future<Either<Failure, void>> signOut();
+  Future<String> signOut();
 
-  Future<Either<Failure, bool>> isLogged();
+  Future<bool> isLogged();
 }
 
 class AuthFirebaseServiceImpl extends AuthFirebaseService {
@@ -49,14 +49,18 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
   }
 
   @override
-  Future<Either<Failure, bool>> isLogged() {
-    // TODO: implement isLogged
-    throw UnimplementedError();
+  Future<bool> isLogged() async {
+    final firebaseAuth = FirebaseAuth.instance;
+    await firebaseAuth.currentUser?.reload();
+    if( firebaseAuth.currentUser!=null){
+      return firebaseAuth.currentUser != null;
+    }
+    throw Exception(ServerFailure("You are not logged"));
   }
 
   @override
-  Future<Either<Failure, void>> signOut() {
-    // TODO: implement logout
-    throw UnimplementedError();
+  Future<String> signOut() async {
+    await FirebaseAuth.instance.signOut();
+    return 'Sign out Successfully!';
   }
 }

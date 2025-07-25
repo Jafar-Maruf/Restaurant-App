@@ -6,5 +6,7 @@ import 'package:dartz/dartz.dart';
 
 part 'entity/user_entity.dart';
 part 'repositories/auth_repository.dart';
-part 'usecases/signup_usecase.dart';
 part 'usecases/signin_usecase.dart';
+part 'usecases/signout_usecase.dart';
+part 'usecases/signup_usecase.dart';
+part 'usecases/is_logged_usecase.dart';

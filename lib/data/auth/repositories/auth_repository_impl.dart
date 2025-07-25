@@ -2,9 +2,13 @@ part of '../index.dart';
 
 class AuthRepositoryImpl extends AuthRepository {
   @override
-  Future<Either<Failure, bool>> isLogged() {
-    // TODO: implement isLogged
-    throw UnimplementedError();
+  Future<Either<Failure, bool>> isLogged() async {
+    try {
+      var result = await sl<AuthFirebaseService>().isLogged();
+     return Right(result);
+    } on Exception catch (e) {
+      return Left(FirebaseExceptionMapper.map(e));
+    }
   }
 
   @override
@@ -22,9 +26,13 @@ class AuthRepositoryImpl extends AuthRepository {
   }
 
   @override
-  Future<Either<Failure, void>> signOut() {
-    // TODO: implement logout
-    throw UnimplementedError();
+  Future<Either<Failure, String>> signOut() async {
+    try {
+      var result = await sl<AuthFirebaseService>().signOut();
+      return Right(result);
+    } on Exception catch (e) {
+      return Left(FirebaseExceptionMapper.map(e));
+    }
   }
 
   @override

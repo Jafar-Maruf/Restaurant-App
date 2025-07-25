@@ -125,7 +125,7 @@ class SignUpView extends StatelessWidget {
     return AuthPrompt(
       promptText: "Do you have an Account? ",
       actionText: "Sign in",
-      onTap: () => AppNavigator.pushReplacementAndRemove(const SignInView()),
+      onTap: () => Get.offAllNamed(AppPages.signIn),
     );
   }
 }

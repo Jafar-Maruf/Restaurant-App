@@ -40,7 +40,7 @@ class SignUpController extends GetxController {
       (data) {
         AppSnackBar.show(
           title: 'Success',
-          message: 'Sign Up Successfully!',
+          message: data,
           backgroundColor: AppColors.primary,
         );
         clearForm();

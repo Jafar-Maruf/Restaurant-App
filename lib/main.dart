@@ -19,7 +19,7 @@ class RestaurantApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
       getPages: AppPages.routes,
-      initialRoute: AppPages.signIn,
+      initialRoute: AppPages.splash,
     );
   }
 }

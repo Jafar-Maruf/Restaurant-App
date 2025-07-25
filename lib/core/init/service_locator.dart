@@ -12,4 +12,6 @@ Future<void> initializeDependency() async {
   //-------------------usecases------------------------------------//
   sl.registerSingleton<SignUpUseCase>(SignUpUseCase());
   sl.registerSingleton<SignInUseCase>(SignInUseCase());
+  sl.registerSingleton<SignOutUseCase>(SignOutUseCase());
+  sl.registerSingleton<IsLoggedInUseCase>(IsLoggedInUseCase());
 }
