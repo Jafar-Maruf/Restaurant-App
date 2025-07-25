@@ -6,9 +6,17 @@ class Assets {
   static const String fontsCircularStdBold = 'assets/fonts/CircularStd-Bold.ttf';
   static const String fontsCircularStdMedium = 'assets/fonts/CircularStd-Medium.ttf';
   static const String fontsCircularStdRegular = 'assets/fonts/CircularStd-Regular.ttf';
-  static const String vectorsArrowLeft = 'assets/vectors/arrow-left.svg';
-  static const String vectorsHome = 'assets/vectors/home.svg';
-  static const String vectorsLogo = 'assets/vectors/logo.png';
-  static const String vectorsProfile = 'assets/vectors/profile.svg';
+  static const String imagesAddIcon = 'assets/images/add-icon.svg';
+  static const String imagesArrowBackOutline = 'assets/images/arrow-back-outline.svg';
+  static const String imagesClarityHeartSolid = 'assets/images/clarity_heart-solid.svg';
+  static const String imagesHeaderMenu = 'assets/images/header-menu.svg';
+  static const String imagesHome = 'assets/images/home.svg';
+  static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesOutlineSearch = 'assets/images/outline_search.svg';
+  static const String imagesPngwing = 'assets/images/pngwing.png';
+  static const String imagesPngwingBig = 'assets/images/pngwing_big.png';
+  static const String imagesPngwingSmall = 'assets/images/pngwing-small.png';
+  static const String imagesProfile = 'assets/images/profile.svg';
+  static const String imagesSlider = 'assets/images/slider.svg';
 
 }

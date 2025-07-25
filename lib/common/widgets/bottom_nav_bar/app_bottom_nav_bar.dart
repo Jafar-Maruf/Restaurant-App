@@ -10,8 +10,8 @@ class AppBottomNavBar extends StatefulWidget {
 class _AppBottomNavBarState extends State<AppBottomNavBar> {
   final List<Widget> _pages = [HomeView(), ProfileView()];
   static const List<NavBarItem> _items = [
-    NavBarItem(assetName: AppImages.vectorsHome, label: 'Home'),
-    NavBarItem(assetName: AppImages.vectorsProfile, label: 'Profile'),
+    NavBarItem(assetName: AppImages.imageHome, label: 'Home'),
+    NavBarItem(assetName: AppImages.imagesProfile, label: 'Profile'),
   ];
   final PageController pageController = PageController();
   var currentIndex = 0;
@@ -36,7 +36,11 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
           setState(() {
             currentIndex = index;
           });
-          pageController.jumpToPage(index);
+          pageController.animateToPage(
+            index,
+            curve: Curves.easeInOut,
+            duration: Duration(milliseconds: 600),
+          );
         },
         items: _items,
       ),

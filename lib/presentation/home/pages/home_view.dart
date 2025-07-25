@@ -5,6 +5,15 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Home', style: AppStyles.styleMedium12(context)));
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12.0),
+          child: HomeViewBody(),
+        ),
+      ),
+      floatingActionButton: ViewOrderButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
   }
 }

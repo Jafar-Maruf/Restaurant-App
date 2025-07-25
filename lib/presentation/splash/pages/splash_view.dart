@@ -11,9 +11,9 @@ class SplashView extends StatelessWidget {
         child: AnimatedBuilder(
           animation: controller.animationController,
           builder: (context, child) => SlideTransition(
-            position: controller.offsetAnimation!,
+            position: controller.offsetAnimation,
             child: Image.asset(
-              AppImages.vectorsLogo,
+              AppImages.imageLogo,
               fit: BoxFit.cover,
             ),
           ),

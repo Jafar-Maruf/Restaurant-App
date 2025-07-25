@@ -8,9 +8,7 @@ class SplashController extends GetxController
   @override
   void onInit() async {
     slidingAnimation();
-    Future.delayed(Duration(seconds: 2), () async {
-      await isLogged();
-    });
+    await isLogged();
     super.onInit();
   }
 
