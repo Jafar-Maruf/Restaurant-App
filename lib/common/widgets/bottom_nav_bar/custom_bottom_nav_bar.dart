@@ -52,7 +52,7 @@ class CustomBottomNavBar extends StatelessWidget {
           colorFilter: ColorFilter.mode(
             isSelected
                 ? AppColors.selectedBtmNavBar
-                : AppColors.unSelectedBtmNavBar,
+                : AppColors.white,
             BlendMode.srcIn,
           ),
         ),

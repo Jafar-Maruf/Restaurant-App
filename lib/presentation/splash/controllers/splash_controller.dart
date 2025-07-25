@@ -17,7 +17,7 @@ class SplashController extends GetxController
   void slidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 1),
     );
     offsetAnimation =
         Tween<Offset>(

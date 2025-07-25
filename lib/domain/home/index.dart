@@ -1,0 +1,1 @@
+part 'entity/food_entity.dart';

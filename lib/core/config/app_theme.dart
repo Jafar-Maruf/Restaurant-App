@@ -6,12 +6,12 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.background,
     brightness: Brightness.dark,
     primaryTextTheme: const TextTheme(
-      bodyLarge: TextStyle(color: AppColors.text),
+      bodyLarge: TextStyle(color: AppColors.white),
     ),
 
     snackBarTheme: const SnackBarThemeData(
       backgroundColor: AppColors.background,
-      contentTextStyle: TextStyle(color: AppColors.text),
+      contentTextStyle: TextStyle(color: AppColors.white),
     ),
 
     inputDecorationTheme: InputDecorationTheme(

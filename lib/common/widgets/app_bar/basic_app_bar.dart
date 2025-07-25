@@ -48,7 +48,7 @@ class BasicAppbar extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 child: Center(
                   child: SvgPicture.asset(
-                    AppImages.vectorsArrowLeft,
+                    AppImages.imageArrowBack,
                     height: 16,
                     width: 16,
                   ),

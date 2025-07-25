@@ -9,8 +9,8 @@ class ProfileController extends GetxController {
           title: 'Error',
           message: error.message,
           backgroundColor: AppColors.secondary,
-          textColor: AppColors.danger,
-          iconColor: AppColors.danger,
+          textColor: AppColors.primary,
+          iconColor: AppColors.primary,
         );
       },
       (data) {
