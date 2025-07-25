@@ -8,6 +8,7 @@ class BasicAppButton extends StatelessWidget {
   final double? width;
   final TextStyle? textStyle;
   final Color? backgroundColor;
+  final Color? textColor;
 
   const BasicAppButton({
     this.onPressed,
@@ -17,6 +18,7 @@ class BasicAppButton extends StatelessWidget {
     this.content,
     this.textStyle,
     this.backgroundColor,
+    this.textColor,
     super.key,
   });
 
@@ -35,9 +37,9 @@ class BasicAppButton extends StatelessWidget {
           content ??
           Text(
             title,
-            style:
-                textStyle ??
-                AppStyles.styleBold16(context).copyWith(color: Colors.white),
+            style: AppStyles.styleBold16(
+              context,
+            ).copyWith(color: textColor ?? Colors.white),
           ),
     );
   }

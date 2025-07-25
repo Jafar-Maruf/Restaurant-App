@@ -8,14 +8,16 @@ class SplashController extends GetxController
   @override
   void onInit() async {
     slidingAnimation();
-    await isLogged();
+    Future.delayed(Duration(seconds: 2), () async {
+      await isLogged();
+    });
     super.onInit();
   }
 
   void slidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 1),
     );
     offsetAnimation =
         Tween<Offset>(
