@@ -45,16 +45,16 @@ jobs:
           mkdir -p android/app
           echo "${{ secrets.GOOGLE_SERVICES }}" | base64 --decode > android/app/google-services.json
 
-
       - name: Bump version build number
         run: |
-          version=$(grep '^version: ' pubspec.yaml | cut -d '+' -f 1)
-          build=$(grep '^version: ' pubspec.yaml | cut -d '+' -f 2)
-          new_build=$((build + 1))
-          new_version="${version}+${new_build}"
+          version_line=$(grep '^version:' pubspec.yaml | cut -d ' ' -f2)
+          version_number=$(echo "$version_line" | cut -d '+' -f1)
+          build_number=$(echo "$version_line" | cut -d '+' -f2)
+          new_build=$((build_number + 1))
+          new_version="${version_number}+${new_build}"
           sed -i "s/^version: .*/version: $new_version/" pubspec.yaml
           echo "Updated version: $new_version"
-
+          
       - name: Install Dependencies
         run: flutter pub get
 
