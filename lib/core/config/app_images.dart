@@ -18,5 +18,5 @@ class AppImages {
   static const String imagesPngwingBig = '$basePathImages/pngwing_big.png';
 
   static const String imagesAddIcon = '$basePathImages/add-icon.svg';
-  static const String imagesShoppingCart = '$basePathImages/shopping_cart.svg';
+  static const String imagesShoppingCart = '$basePathImages/shopping-cart.svg';
 }

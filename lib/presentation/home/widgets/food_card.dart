@@ -43,15 +43,24 @@ class FoodCard extends StatelessWidget {
 
       child: ClipRRect(
         borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-        child: Image.asset(
-          imageAsset,
-          fit: BoxFit.scaleDown,
-          errorBuilder: (context, error, stackTrace) {
+        child: CachedNetworkImage(
+          imageUrl: imageAsset,
+          imageBuilder: (context, imageProvider) => Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
+            ),
+          ),
+          placeholder: (context, url) {
             return Container(
-              color: const Color(0xFF3A3A3A),
-              child: const Icon(Icons.fastfood, color: Colors.grey, size: 40),
+              decoration: BoxDecoration(
+                color: AppColors.container,
+                shape: BoxShape.circle,
+              ),
             );
           },
+          errorWidget: (context, url, error) => Icon(Icons.error),
+          fadeOutCurve: Curves.easeInOut,
         ),
       ),
     );

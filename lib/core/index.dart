@@ -1,6 +1,9 @@
 import 'package:basic_restaurant_app/common/index.dart';
 import 'package:basic_restaurant_app/data/auth/index.dart';
+import 'package:basic_restaurant_app/data/category/index.dart';
+import 'package:basic_restaurant_app/data/food/index.dart';
 import 'package:basic_restaurant_app/domain/auth/index.dart';
+import 'package:basic_restaurant_app/domain/category/index.dart';
 import 'package:basic_restaurant_app/firebase_options.dart';
 import 'package:basic_restaurant_app/presentation/auth/index.dart';
 import 'package:basic_restaurant_app/presentation/home/index.dart';
@@ -12,6 +15,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
+
+import '../domain/food/index.dart';
 
 part 'bindings/home_binding.dart';
 part 'bindings/profile_binding.dart';

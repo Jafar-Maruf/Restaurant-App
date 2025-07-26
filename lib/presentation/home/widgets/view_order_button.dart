@@ -17,6 +17,7 @@ class ViewOrderButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
         icon: SvgPicture.asset(
           AppImages.imagesShoppingCart,
+          colorFilter: ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
           fit: BoxFit.scaleDown,
         ),
         label: Text(

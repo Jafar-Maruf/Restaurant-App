@@ -13,10 +13,8 @@ class Assets {
   static const String imagesHome = 'assets/images/home.svg';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesOutlineSearch = 'assets/images/outline_search.svg';
-  static const String imagesPngwing = 'assets/images/pngwing.png';
-  static const String imagesPngwingBig = 'assets/images/pngwing_big.png';
-  static const String imagesPngwingSmall = 'assets/images/pngwing-small.png';
   static const String imagesProfile = 'assets/images/profile.svg';
+  static const String imagesShoppingCart = 'assets/images/shopping-cart.svg';
   static const String imagesSlider = 'assets/images/slider.svg';
 
 }
