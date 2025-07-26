@@ -1,3 +1,5 @@
+part of '../index.dart';
+
 class StoreUserRequest {
   final String firstName;
   final String lastName;

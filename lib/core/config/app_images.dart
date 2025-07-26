@@ -14,9 +14,6 @@ class AppImages {
   static const String imagesHeaderMenu = '$basePathImages/header-menu.svg';
   static const String imagesHeart = '$basePathImages/clarity_heart-solid.svg';
 
-  static const String imagesPngwingSmall = '$basePathImages/pngwing-small.png';
-  static const String imagesPngwingBig = '$basePathImages/pngwing_big.png';
-
   static const String imagesAddIcon = '$basePathImages/add-icon.svg';
   static const String imagesShoppingCart = '$basePathImages/shopping-cart.svg';
 }

@@ -11,7 +11,7 @@ class HomeController extends GetxController {
   var isLoadingPopular = false.obs;
   var isLoadingFoodByCategory = false.obs;
 
-  var selectedTabIndex = 0.obs;
+  final RxInt selectedTabIndex = 0.obs;
 
   @override
   void onInit() {
@@ -20,6 +20,14 @@ class HomeController extends GetxController {
     getFavouriteFoods();
     getPopularFoods();
     getFoodByCategoryName();
+  }
+
+  void changeCategoryTab({required int index}) async {
+    if (selectedTabIndex.value == index) return;
+
+    selectedTabIndex.value = index;
+    final selectedCategory = categories[index];
+    await getFoodByCategoryName(categoryName: selectedCategory.title);
   }
 
   Future<void> getAllCategories() async {
@@ -40,7 +48,6 @@ class HomeController extends GetxController {
 
   Future<void> getFavouriteFoods() async {
     isLoadingFavourite.value = true;
-
     var result = await sl<GetFavouriteFood>().call();
     result.fold(
       (failure) {
@@ -70,10 +77,10 @@ class HomeController extends GetxController {
     );
   }
 
-  Future<void> getFoodByCategoryName() async {
+  Future<void> getFoodByCategoryName({String categoryName = 'Burger'}) async {
     isLoadingFoodByCategory.value = true;
 
-    var result = await sl<GetFoodByCategoryName>().call('Burger');
+    var result = await sl<GetFoodByCategoryName>().call(categoryName);
     result.fold(
       (failure) {
         AppSnackBar.show(title: 'Error', message: failure.message);
@@ -84,12 +91,5 @@ class HomeController extends GetxController {
         isLoadingFoodByCategory.value = false;
       },
     );
-  }
-
-  CategoryEntity? get selectedCategory {
-    if (categories.isNotEmpty && selectedTabIndex.value < categories.length) {
-      return categories[selectedTabIndex.value];
-    }
-    return null;
   }
 }

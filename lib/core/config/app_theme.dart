@@ -17,8 +17,8 @@ class AppTheme {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: AppColors.secondary,
-      hintStyle: const TextStyle(
-        color: Color(0xffA7A7A7),
+      hintStyle: TextStyle(
+        color: AppColors.hintText,
         fontWeight: FontWeight.w400,
       ),
       contentPadding: const EdgeInsets.all(16),

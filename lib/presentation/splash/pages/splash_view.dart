@@ -14,10 +14,13 @@ class SplashView extends StatelessWidget {
             position: controller.offsetAnimation,
             child: Image.asset(
               AppImages.imageLogo,
+              color: AppColors.primary,
+              colorBlendMode: BlendMode.srcIn,
               fit: BoxFit.cover,
             ),
           ),
         ),
       ),
-    );  }
+    );
+  }
 }

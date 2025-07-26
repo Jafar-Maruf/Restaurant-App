@@ -11,7 +11,7 @@ class ViewOrderButton extends StatelessWidget {
       height: 56,
       child: FloatingActionButton.extended(
         onPressed: () {},
-        backgroundColor: AppColors.secondary,
+        backgroundColor: Colors.transparent,
         foregroundColor: Colors.white,
         elevation: 8,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),

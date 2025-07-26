@@ -1,7 +1,6 @@
 import 'package:basic_restaurant_app/common/index.dart';
 import 'package:basic_restaurant_app/core/index.dart';
 import 'package:basic_restaurant_app/data/auth/index.dart';
-import 'package:basic_restaurant_app/data/auth/requests/store_user_request.dart';
 import 'package:basic_restaurant_app/domain/auth/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

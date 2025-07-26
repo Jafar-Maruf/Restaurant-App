@@ -5,6 +5,5 @@ import 'package:dartz/dartz.dart';
 
 part 'models/food_image_model.dart';
 part 'models/food_model.dart';
-part 'models/food_with_image_model.dart';
 part 'repositories/food_repository_impl.dart';
 part 'sources/food_firebase_service.dart';
